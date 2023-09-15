@@ -1,0 +1,31 @@
+// Cars: Write a function that stores information about a car in a Object. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Print the Object that’s returned to make sure all the information was stored correctly.
+
+type Car = {
+    manufacturer: string;
+    model: string;
+    color?: string;
+    year?: number;
+  };
+  
+  function createCar(manufacturer: string, model: string, color?: string, year?: number): Car {
+    const car: Car = {
+      manufacturer,
+      model,
+    };
+  
+    if (color !== undefined) {
+      car.color = color;
+    }
+  
+    if (year !== undefined) {
+      car.year = year;
+    }
+  
+    return car;
+  }
+  
+  const myCar = createCar("Toyota", "Camry", "blue", 2023);
+  console.log(myCar);
+
+  console.log(createCar("Toyota", "Camry"));
+  
