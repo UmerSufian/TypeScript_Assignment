@@ -7,3 +7,4 @@ let updated = num.filter((val) => {
     }
 });
 console.log(updated);
+

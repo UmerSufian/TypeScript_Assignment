@@ -9,3 +9,4 @@ let updated=num.filter((val:number)=>{
     }
 });
 console.log(updated);
+
